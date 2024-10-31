@@ -40,9 +40,11 @@ const AllOrders = () => {
       case "Cancel":
         return "Đã hủy";
       case "Shipping":
-        return "Đang được vận chuyển";
+        return "Đang vận chuyển về kho";
       case "On the way":
-        return "Đang trên đường tới";
+        return "Đang giao hàng";
+      case "Received":
+        return "Đã nhận";
       default:
         return status;
     }
@@ -214,8 +216,8 @@ const AllOrders = () => {
                 <option value="Đang chờ xử lý">Đang chờ xử lý</option>
                 <option value="Đang xử lý">Đang xử lý</option>
                 <option value="Đã hủy">Đã hủy</option>
-                <option value="Đang được vận chuyển">Đang được vận chuyển</option>
-                <option value="Đang trên đường tới">Đang trên đường tới</option>
+                <option value="Đang vận chuyển về kho">Đang vận chuyển về kho</option> 
+                <option value="Đang giao hàng">Đang giao hàng</option>
               </select>
               <Button
                 onClick={handleResetFilters}

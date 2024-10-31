@@ -23,3 +23,15 @@ export const getAllSellers = () => async (dispatch) => {
     });
   }
 };
+
+export const logoutSeller = () => async (dispatch) => {
+  try {
+    await axios.get(`${server}/shop/logout`, { withCredentials: true });
+    
+    dispatch({
+      type: "LogoutSeller",
+    });
+  } catch (error) {
+    console.log("Logout failed:", error.response.data.message);
+  }
+};

@@ -7,6 +7,7 @@ import Loader from "../Layout/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProductsShop } from "../../redux/actions/product";
 import { useNavigate } from "react-router-dom";
+import { logoutSeller } from "../../redux/actions/sellers";
 
 
 const ShopInfo = ({ isOwner }) => {
@@ -31,12 +32,24 @@ const ShopInfo = ({ isOwner }) => {
   }, [])
   
 
-  const logoutHandler = async () => {
-    axios.get(`${server}/shop/logout`,{
-      withCredentials: true,
-    });
-    navigate("/");
-    window.location.reload();
+  // const logoutHandler = async () => {
+  //   axios.get(`${server}/shop/logout`,{
+  //     withCredentials: true,
+  //   });
+  //   setTimeout(() => {
+  //     navigate("/");
+  //   window.location.reload(true);
+  //   }, 500)
+  // };
+
+  const logoutHandler = () => {
+    
+    dispatch(logoutSeller());
+  
+    setTimeout(() => {
+      navigate("/shop-login");
+      window.location.reload(true);
+    }, 1000);
   };
 
   const totalReviewsLength =

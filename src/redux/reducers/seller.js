@@ -34,4 +34,10 @@ export const sellerReducer = createReducer(initialState, {
   clearErrors: (state) => {
     state.error = null;
   },
+
+  LogoutSeller: (state) => {
+    state.isSeller = false;
+    state.seller = null;
+    state.isLoading = false;
+  },
 });

@@ -40,7 +40,7 @@ const AllOrders = () => {
       case "Cancel":
         return "Đã hủy";
       case "Shipping":
-        return "Đang vận chuyển về kho";
+        return "Chuyển đến giao hàng";
       case "On the way":
         return "Đang giao hàng";
       case "Received":
@@ -216,7 +216,7 @@ const AllOrders = () => {
                 <option value="Đang chờ xử lý">Đang chờ xử lý</option>
                 <option value="Đang xử lý">Đang xử lý</option>
                 <option value="Đã hủy">Đã hủy</option>
-                <option value="Đang vận chuyển về kho">Đang vận chuyển về kho</option> 
+                <option value="Chuyển đến giao hàng">Chuyển đến giao hàng</option> 
                 <option value="Đang giao hàng">Đang giao hàng</option>
               </select>
               <Button

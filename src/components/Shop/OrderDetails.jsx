@@ -156,7 +156,7 @@ const OrderDetails = () => {
           className="w-[200px] mt-2 border h-[35px] rounded-[5px]"
         >
           {[
-            { value: "Shipping", label: "Đang vận chuyển về kho" },
+            { value: "Shipping", label: "Chuyển đến giao hàng" },
             { value: "Received", label: "Đã nhận" },
             { value: "On the way", label: "Đang giao hàng" },
             { value: "Delivered", label: "Đã giao" },
